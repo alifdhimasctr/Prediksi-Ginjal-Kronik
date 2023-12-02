@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link
+    href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    rel="stylesheet"
+    id="bootstrap-css"
+  />
+  <link href="..\static\style.css" rel="stylesheet" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediksi Ginjal Kronik</title>
+  </head>
+  <body>
+    <div class="container contact-form">
+      <div class="contact-image">
+        <img
+          src="../kidney.png"
+          alt="Ginjal"
+        />
+      </div>
+      <form method="post" action="{{url_for('predict')}}">
+        <h3>Prediksi Ginjal Kronik</h3>
+        <div class="form-group">
+          <input
+            type="text"
+            name="umur"
+            class="form-control"
+            placeholder="Umur"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="tekanandarah"
+            class="form-control"
+            placeholder="Tekanan Darah"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="albumin"
+            class="form-control"
+            placeholder="Albumin"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="gds"
+            class="form-control"
+            placeholder="GDS"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="ureum"
+            class="form-control"
+            placeholder="Ureum"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="kreatinin"
+            class="form-control"
+            placeholder="Kreatinin"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="hemoglobin"
+            class="form-control"
+            placeholder="Hemoglobin"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="MCV"
+            class="form-control"
+            placeholder="MCV"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="seldarahputih"
+            class="form-control"
+            placeholder="Sel Darah Putih"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="seldarahmerah"
+            class="form-control"
+            placeholder="Sel Darah Merah"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="hipertensi"
+            class="form-control"
+            placeholder="Hipertensi (1 untuk ya, 0 untuk tidak)"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="diabetes"
+            class="form-control"
+            placeholder="Diabetes (1 untuk ya, 0 untuk tidak)"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="nafsumakan"
+            class="form-control"
+            placeholder="Nafsu Makan"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="anemia"
+            class="form-control"
+            placeholder="Anemia"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+        <div><br>Hasil Prediksi adalah {{prediction_text}}</div>
+      </form>
+        
+
+    </div>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>
